@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Episode 2</title>
+</head>
+<body>
+    <div id='container'></div>
+    <script>
+    /*Dynamically display a list of food items and prices using HTML & JavaScript
+
+[ ] Create a LIST of OBJECTS, each object having a name and price property
+[ ] LOOP over that LIST, dynamically create a new list item <li></li> with the food name inside, 
+and append that item to an existing HTML <ul></ul> element */
+   let cont = document.getElementById('container');
+
+    const productList = [
+    { name: "Apple", price: 10.99 },
+    { name: "Banana", price: 20.49 },
+    { name: "Oranges", price: 5.99 },
+    { name: "Pears", price: 15.75 },
+   ];
+  
+   let ul = document.createElement('ul');
+   for (i = 0; i <= productList.length - 1; i++) {
+        let li = document.createElement('li'); // create li element.
+        li.innerHTML = productList[i].name; // assigning text to li using array value.
+        ul.appendChild(li); // append li to ul.
+        
+    }
+    cont.appendChild(ul);   // add list to the container.
+
+    </script>
+</body>
+</html>

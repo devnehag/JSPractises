@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Episode 1</title>
+</head>
+<body>
+    
+<script>
+    // Write a JavaScript program that displays "Hello, World!" on the console.
+
+    console.log("Hello World");
+
+    //Declare a variable named name and assign it your name as a string. 
+    //Display the value of the name variable on the console.
+
+    let name = "Neha";
+    console.log(name);
+
+    //Write a JavaScript program that calculates and displays the area of a rectangle. 
+    //Use variables length and width to store the dimensions of the rectangle.
+
+    let rectLength = 12;
+    let rectWidth = 10;
+
+    function rectArea(rectLength, rectWidth){
+        return rectLength*rectWidth;
+    }
+    console.log(rectArea(rectLength,rectWidth));
+
+    //Write a JavaScript program that checks if a number is even or odd. 
+    //Display a message on the console indicating whether the number is even or odd.
+
+    function checkEvenOrOdd(number) {
+  if (number % 2 === 0) {
+    return "even";
+  } else {
+    return "odd";
+  }
+}
+
+// Test cases
+const number1 = 10;
+const number2 = 7;
+
+console.log(`${number1} is ${checkEvenOrOdd(number1)}.`);
+console.log(`${number2} is ${checkEvenOrOdd(number2)}.`);
+
+//Write a JavaScript program that displays the numbers from 1 to 10 on the console using a for loop
+
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+//Write a JavaScript program that prompts the user for their name and displays a personalized greeting message on the console.
+
+const userName = prompt("What's your name?");
+console.log(`Hello, ${userName}! Welcome to our website.`);
+
+//Write a JavaScript program that calculates and displays the factorial of a number. 
+//Prompt the user for a number and display its factorial on the console.
+
+const userInput = prompt("Enter a number: ");
+const number = parseInt(userInput);
+if (isNaN(number)) {
+  console.log("Invalid input. Please enter a valid number.");
+} else {
+  let factorial = 1;
+
+  for (let i = 1; i <= number; i++) {
+    factorial *= i;
+  }
+
+  console.log(`The factorial of ${number} is ${factorial}`);
+}
+
+//Write a JavaScript program that determines if a given year is a leap year. Prompt the user for a year and display a message on the console indicating whether it is a leap year or not.
+
+// Prompt the user for a year
+const userInput2 = prompt("Enter a year: ");
+const year = parseInt(userInput2);
+
+// Check if the year is a leap year
+if (isNaN(year)) {
+  console.log("Invalid input. Please enter a valid year.");
+} else if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+  console.log(`${year} is a leap year.`);
+} else {
+  console.log(`${year} is not a leap year.`);
+}
+
+//Write a JavaScript program that calculates and displays the sum of all numbers from 1 to 100 using a while loop.
+let sum = 0;
+let num = 1;
+
+while (num <= 100) {
+  sum += num;
+  num++;
+}
+
+console.log(`The sum of numbers from 1 to 100 is: ${sum}`);
+
+//Write a JavaScript program that prompts the user for two numbers and performs the four basic arithmetic operations (addition, subtraction, multiplication, division) on those numbers. Display the results on the console.
+
+// Prompt the user for two numbers
+const firstNumberInput = prompt("Enter the first number: ");
+const secondNumberInput = prompt("Enter the second number: ");
+
+// Convert input to numbers
+const firstNumber = parseFloat(firstNumberInput);
+const secondNumber = parseFloat(secondNumberInput);
+
+// Check if the input is valid numbers
+if (isNaN(firstNumber) || isNaN(secondNumber)) {
+  console.log("Invalid input. Please enter valid numbers.");
+} else {
+  // Perform arithmetic operations
+  const addition = firstNumber + secondNumber;
+  const subtraction = firstNumber - secondNumber;
+  const multiplication = firstNumber * secondNumber;
+  
+  // Check for division by zero
+  const division = secondNumber !== 0 ? firstNumber / secondNumber : "Cannot divide by zero";
+
+  // Display results
+  console.log(`Addition: ${addition}`);
+  console.log(`Subtraction: ${subtraction}`);
+  console.log(`Multiplication: ${multiplication}`);
+  console.log(`Division: ${division}`);
+}
+/*Create a variable for every JavaScript Data Type
+
+[ ] Create a variable that holds a string value
+[ ] Create a variable that holds a number value
+[ ] Create a variable that holds a boolean value
+[ ] Create a variable that holds a null value
+[ ] Create a variable that holds an undefined value
+[ ] Create a variable that points to an object instance
+[ ] Create a variable that points to an array instance
+[ ] Create a variable that has no default value declaration
+
+*/
+// Variable holding a string value
+let stringValue = "Hello, world!";
+
+// Variable holding a number value
+let numberValue = 42;
+
+// Variable holding a boolean value
+let booleanValue = true;
+
+// Variable holding a null value
+let nullValue = null;
+
+// Variable holding an undefined value
+let undefinedValue;
+
+// Variable pointing to an object instance
+let objectValue = {
+  key: "value",
+  age: 25,
+};
+
+// Variable pointing to an array instance
+let arrayValue = [1, 2, 3, 4, 5];
+
+// Variable with no default value declaration
+let noValue;
+
+console.log("String:", stringValue);
+console.log("Number:", numberValue);
+console.log("Boolean:", booleanValue);
+console.log("Null:", nullValue);
+console.log("Undefined:", undefinedValue);
+console.log("Object:", objectValue);
+console.log("Array:", arrayValue);
+console.log("No Value:", noValue);
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
